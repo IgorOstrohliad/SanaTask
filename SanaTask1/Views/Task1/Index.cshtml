@@ -1,0 +1,14 @@
+﻿@model User;
+@{
+    ViewData["Title"] = "Task1";
+}
+
+<h1>Task1</h1>
+@using (Html.BeginForm("Index", "Task1", FormMethod.Post))
+{
+    <div>@Html.TextBox("Name")</div>
+    <div>
+        <button type="submit">Submit</button>
+    </div>
+    <div>@Model.Name</div>
+}
